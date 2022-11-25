@@ -1,0 +1,54 @@
+bootstrap:
+  features:
+    aggregated-level-name: all
+    dataset-suffix: ds
+    group-prefix: cdf
+    rawdb-additional-variants:
+    - state
+    rawdb-suffix: db
+    with-raw-capability: true
+    with-special-groups: false
+  idp-cdf-mappings:
+  - cdf-project: bootcamp-03-prod
+    mappings:
+    - cdf-group: cdf:all:owner
+      idp-source-id: f19bd927-99b8-4e0d-933f-4b0873b27860
+      idp-source-name: bootcamp-03-prod-all-owner
+    - cdf-group: cdf:all:read
+      idp-source-id: 2c0a801e-a32f-496e-be22-fe0f84f1c54d
+      idp-source-name: bootcamp-03-prod-all-read
+  namespaces:
+  - description: Customer source-systems
+    ns-name: src
+    ns-nodes:
+    - description: Sources 001; data from SAP
+      node-name: src:001:sap
+    - description: Sources 002; data from Infor EAM
+      node-name: src:002:infor
+    - description: Sources 003; from OPC UA
+      node-name: src:003:opcua
+  - description: Use Cases representing the data-products
+    ns-name: uc
+    ns-nodes:
+    - description: Use Case 001; Overall Equipment Effectiveness
+      node-name: uc:001:oee
+      shared-access:
+        read:
+        - node-name: src:001:sap
+        - node-name: src:002:infor
+        - node-name: src:003:opcua
+cognite:
+  host: ${BOOTSTRAP_CDF_HOST}
+  idp-authentication:
+    client-id: ${BOOTSTRAP_IDP_CLIENT_ID}
+    scopes:
+    - ${BOOTSTRAP_IDP_SCOPES}
+    secret: ${BOOTSTRAP_IDP_CLIENT_SECRET}
+    token_url: ${BOOTSTRAP_IDP_TOKEN_URL}
+  project: ${BOOTSTRAP_CDF_PROJECT}
+logger:
+  console:
+    level: INFO
+  file:
+    level: INFO
+    path: ./logs/bootstrap-cli-logs.log
