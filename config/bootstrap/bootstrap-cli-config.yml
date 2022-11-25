@@ -55,26 +55,44 @@ bootstrap:
     # Mapping between IDP (Azure Active Directory) groups and CDF groups.
     idp-cdf-mappings:
     # Support multiple CDF Projects, like dev/test/prod in one config. 
-        - cdf-project: [CDF project name - test]
+        - cdf-project: bootcamp-03-test
           mappings:
               - cdf-group: cdf:all:owner
-                idp-source-id: [Azure AD group id]
-                idp-source-name: [Azure AD group name]
+                idp-source-id: dc96dba0-6e1f-4212-86e5-6efa120e2cf1
+                idp-source-name: bootcamp-03-test-all-owner
               - cdf-group: cdf:all:read
-                idp-source-id: [Azure AD group id]
-                idp-source-name: [Azure AD group name]
+                idp-source-id: c3cbedb9-ff4c-4c84-b8bd-dfb87c691415
+                idp-source-name: bootcamp-03-test-all-read
+
+        - cdf-project: bootcamp-03-prod
+          mappings:
+              - cdf-group: cdf:all:owner
+                idp-source-id: 061b488a-d1cf-4f51-9db3-bb8b8225bb53
+                idp-source-name: bootcamp-03-test-all-owner
+              - cdf-group: cdf:all:read
+                idp-source-id: 38823c8c-69da-458c-b54c-140f24007acf
+                idp-source-name: bootcamp-03-test-all-read
 
 
     namespaces:
         # Typical config will have separate namespace by data source ("src") and use cases ("uc")
-        - ns-name: [Namespace name]
-          description: [Description]
+        - ns-name: src
+          description: namespace src
 
           # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
           ns-nodes:
-              - node-name: [Node name]
-                description: [Node description]
-
+              - node-name: 001:sap
+                description: node 001:sap
+              - node-name: 002:infor
+                description: node 002:infor
+              - node-name: 003:opcua
+                description: node 003:opcua
+        - ns-name: uc
+          description: namespace uc
+          
+          ns-nodes:
+              - node-name: 001:oee
+                description: node 001:oee
 
 # de-facto standards for CDF CogniteClient and logger configuration.
 # Following the same parameter structure as the 'Cognite Python Extractor-Utilities'
