@@ -68,11 +68,11 @@ bootstrap:
           mappings:
               - cdf-group: cdf:all:owner
                 idp-source-id: f19bd927-99b8-4e0d-933f-4b0873b27860
-                idp-source-name: bootcamp-03-test-all-owner
+                idp-source-name: bootcamp-03-prod-all-owner
               - cdf-group: cdf:all:read
-                idp-source-id: 02c0a801e-a32f-496e-be22-fe0f84f1c54d
-                idp-source-name: bootcamp-03-test-all-read
-                
+                idp-source-id: 2c0a801e-a32f-496e-be22-fe0f84f1c54d
+                idp-source-name: bootcamp-03-prod-all-read
+
     namespaces:
         # Typical config will have separate namespace by data source ("src") and use cases ("uc")
         # Typical config will have separate namespace by data source ("src") and use cases ("uc")
