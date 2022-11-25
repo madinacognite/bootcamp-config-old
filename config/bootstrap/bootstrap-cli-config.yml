@@ -67,35 +67,24 @@ bootstrap:
 
     namespaces:
         # Typical config will have separate namespace by data source ("src") and use cases ("uc")
-        - ns-name: [Namespace name]
-          description: [Description]
+        # Typical config will have separate namespace by data source ("src") and use cases ("uc")
+        - ns-name: src
+          description: namespace src
 
           # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
           ns-nodes:
-              - node-name: [Node name]
-                description: [Node description]
-
-    namespaces:
-  - description: Customer source-systems
-    ns-name: src
-    ns-nodes:
-    - description: Sources 001; data from SAP
-      node-name: src:001:sap
-    - description: Sources 002; data from Infor EAM
-      node-name: src:002:infor
-    - description: Sources 003; from OPC UA
-      node-name: src:003:opcua
-  - description: Use Cases representing the data-products
-    ns-name: uc
-    ns-nodes:
-    - description: Use Case 001; Overall Equipment Effectiveness
-      node-name: uc:001:oee
-      shared-access:
-        read:
-        - node-name: src:001:sap
-        - node-name: src:002:infor
-        - node-name: src:003:opcua
-
+              - node-name: 001:sap
+                description: node 001:sap
+              - node-name: 002:infor
+                description: node 002:infor
+              - node-name: 003:opcua
+                description: node 003:opcua
+        - ns-name: uc
+          description: namespace uc
+          
+          ns-nodes:
+              - node-name: 001:oee
+                description: node 001:oee
 
 # de-facto standards for CDF CogniteClient and logger configuration.
 # Following the same parameter structure as the 'Cognite Python Extractor-Utilities'
