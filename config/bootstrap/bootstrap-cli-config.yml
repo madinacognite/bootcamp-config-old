@@ -73,7 +73,7 @@ bootstrap:
                 idp-source-id: 2c0a801e-a32f-496e-be22-fe0f84f1c54d
                 idp-source-name: bootcamp-03-prod-all-read
 
-    namespaces:
+    # namespaces:
         # Typical config will have separate namespace by data source ("src") and use cases ("uc")
         # Typical config will have separate namespace by data source ("src") and use cases ("uc")
         # - ns-name: src
