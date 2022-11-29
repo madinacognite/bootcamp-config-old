@@ -26,9 +26,9 @@ extpipe-pattern: '{source}:{short-name}:{rawtable-name}:{suffix}'
 
 # can contain multiple contacts, can be overwritten on pipeline level
 default-contacts:
-    - name: [Contact name]
-      email: [Contact email]
-      role: [Role name]
+    - name: Madinabonu Kholmatova
+      email: madina.kholmatova@cognitedata.com
+      role: Academy Engineer
       send-notification: true
 
 rawdbs:
