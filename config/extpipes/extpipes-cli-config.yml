@@ -45,7 +45,7 @@ rawdbs:
                 - source: csv
                   schedule: On trigger
                   contacts:
-                      - name: [Contact name]
-                        email: [Contact e-mail]
-                        role: [Contact role]
+                      - name: Madinabonu Kholmatova
+                        email: madina.kholmatova@cognitedata.com
+                        role: Academy Engineer
                         send-notification: false
