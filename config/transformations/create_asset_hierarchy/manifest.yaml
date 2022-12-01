@@ -52,4 +52,3 @@ authentication:
   cdfProjectName: ${CDF_PROJECT_NAME}
   scopes:
     - https://greenfield.cognitedata.com/.default
-
