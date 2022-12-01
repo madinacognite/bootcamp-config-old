@@ -1,7 +1,7 @@
 # Manifest file downloaded from fusion
 externalId: 0932bfbf-7f35-4bef-8dd9-2413cb2859a5
 name: create_timeseries
-query: |-
+query: 
   file: create_timeseries.sql
 destination:
   type: timeseries
