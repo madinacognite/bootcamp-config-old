@@ -7,8 +7,8 @@ name: Deploy transformations
 
 on:
     push:
-        #branches: [main]
-        branches: [none]
+        #branches: [none]
+        branches: [main]
 
 jobs:
     deploy:
@@ -20,18 +20,18 @@ jobs:
                 include:
                     - environment: test
                       # CDF cluster, like bluefield or greenfield
-                      CDF_CLUSTER: [CDF cluster]
+                      CDF_CLUSTER: greenfield
                       # CDF Project name
-                      CDF_PROJECT: [CDF project]
+                      CDF_PROJECT: bootcamp-03-test
                       # Azure AD tenant id
-                      IDP_TENANT: [AAD tenant id]
+                      IDP_TENANT: 16e3985b-ebe8-4e24-9da4-933e21a9fc81
                     - environment: prod
                       # CDF cluster, like bluefield or greenfield
-                      CDF_CLUSTER: [CDF cluster]
+                      CDF_CLUSTER: greenfield
                       # CDF Project name
-                      CDF_PROJECT: [CDF project]
+                      CDF_PROJECT: bootcamp-03-prod
                       # Azure AD tenant id
-                      IDP_TENANT: [AAD tenant id]
+                      IDP_TENANT: 16e3985b-ebe8-4e24-9da4-933e21a9fc81
 
         environment: ${{ matrix.environment}}
         env:

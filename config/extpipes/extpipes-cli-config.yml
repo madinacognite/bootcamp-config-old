@@ -49,3 +49,38 @@ rawdbs:
                         email: madina.kholmatova@cognitedata.com
                         role: Academy Engineer
                         send-notification: false
+
+
+    - rawdb-name: src:003:opcua:db
+      dataset-external-id: src:003:opcua:ds
+      short-name: oee
+      rawtables:
+          - rawtable-name: raw_timeseries
+            pipelines:
+        # source is a short-name identifying the pipeline source being
+        # a 'db-extractor (db)', an 'Azure Function (az-func)',
+        # or 'Azure Data Factory (adf)', 'Python script (py)', ..
+                - source: csv
+                  schedule: On trigger
+                  contacts:
+                      - name: Madinabonu Kholmatova
+                        email: madina.kholmatova@cognitedata.com
+                        role: Academy Engineer
+                        send-notification: false
+      
+    - rawdb-name: src:003:opcua:db
+      dataset-external-id: src:003:opcua:ds
+      short-name: oee
+      rawtables:
+          - rawtable-name: datapoints
+            pipelines:
+        # source is a short-name identifying the pipeline source being
+        # a 'db-extractor (db)', an 'Azure Function (az-func)',
+        # or 'Azure Data Factory (adf)', 'Python script (py)', ..
+                - source: rest-api
+                  schedule: On trigger
+                  contacts:
+                      - name: Madinabonu Kholmatova
+                        email: madina.kholmatova@cognitedata.com
+                        role: Academy Engineer
+                        send-notification: false
