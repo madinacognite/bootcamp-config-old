@@ -1,7 +1,7 @@
 ---
 # Manifest file downloaded from fusion
-externalId: tr-create_asset_hierarchy_ui
-name: create_asset_hierarchy_ui
+externalId: tr-create_asset_hierarchy
+name: create_asset_hierarchy
 query: 
   file: create_asset_hierarchy.sql
 destination:
@@ -52,9 +52,4 @@ authentication:
   cdfProjectName: ${CDF_PROJECT_NAME}
   scopes:
     - https://greenfield.cognitedata.com/.default
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
+
